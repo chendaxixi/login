@@ -16,7 +16,6 @@ headers = {
 data = {
     "action": "login",
     "username": "用户名",
-#    "password": "{MD5_HEX}b806885273e7a4df76e71cca1a0fdcc4",
     "password": "{MD5_HEX}密码的md5加密",
     "ac_id": "1"
     }

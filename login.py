@@ -1,5 +1,9 @@
 import urllib
 import urllib2
+import hashlib
+m = hashlib.md5()
+m.update('***')
+psw = m.hexdigest()
 requrl = "https://net.tsinghua.edu.cn/do_login.php"
 headers = {
     "Host": "net.tsinghua.edu.cn",
@@ -16,7 +20,7 @@ headers = {
 data = {
     "action": "login",
     "username": "用户名",
-    "password": "{MD5_HEX}密码的md5加密",
+    "password": "{MD5_HEX}%s" % psw,
     "ac_id": "1"
     }
 data_urlencode = urllib.urlencode(data)
